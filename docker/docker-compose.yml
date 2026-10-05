@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      BASE_URL: http://host.docker.internal:3000
+      API_BASE_URL: http://host.docker.internal:8080
+    network_mode: host
